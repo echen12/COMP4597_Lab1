@@ -143,11 +143,16 @@ function displayCards() {
     });
 }
 
+function TestObject(key, userText) {
+    this.key = key;
+    this.userText = userText;
+}
+
 function getTextFromUser() {
     let userInput = document.getElementById("userInput").value;
     let editTextP = document.getElementById("editText");
     let uniqueKey = Date.now()
-    let testObject = { key: uniqueKey, userText: userInput }
+    let testObject = new TestObject(uniqueKey, userInput);
     let localStorageArray = JSON.parse(localStorage.getItem("testArray") || "[]")
 
     localStorageArray.push(testObject)
