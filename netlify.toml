@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/"
+  from = "/comp4537/labs/1"
   to = "COMP4537/labs/1/index.html"
   status = 301
   force = false
