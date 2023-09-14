@@ -84,27 +84,27 @@ function deleteCard(e) {
 function createCard(key, value) {
     // console.log({ key, value })
 
-    var card = document.createElement('div');
+    let card = document.createElement('div');
     card.id = key;
     card.className = 'card';
     card.style.width = '18rem';
 
     // Create card body element
-    var cardBody = document.createElement('div');
+    let cardBody = document.createElement('div');
     cardBody.className = 'card-body';
 
     // Create card text element
-    var cardText = document.createElement('p');
+    let cardText = document.createElement('p');
     cardText.id = 'cardTextContent';
     cardText.className = 'card-text';
     cardText.textContent = value;
 
     // Create buttons container element
-    var buttonContainer = document.createElement('div');
+    let buttonContainer = document.createElement('div');
     buttonContainer.className = 'd-flex justify-content-evenly';
 
     // Create Edit button
-    var editButton = document.createElement('a');
+    let editButton = document.createElement('a');
     editButton.id = key;
     editButton.onclick = editCard;
     editButton.href = '#';
@@ -112,7 +112,7 @@ function createCard(key, value) {
     editButton.textContent = 'Edit';
 
     // Create Delete button
-    var deleteButton = document.createElement('a');
+    let deleteButton = document.createElement('a');
     deleteButton.id = key;
     deleteButton.onclick = deleteCard;
     deleteButton.href = '#';
@@ -129,13 +129,13 @@ function createCard(key, value) {
     card.appendChild(cardBody);
 
     // Append the card to the cardContainer div
-    var cardContainer = document.getElementById('cardContainer');
+    let cardContainer = document.getElementById('cardContainer');
     cardContainer.appendChild(card);
 }
 
 function displayCards() {
     let arrayToIterate = JSON.parse(localStorage.getItem("testArray"));
-    var cardContainer = document.getElementById('cardContainer');
+    let cardContainer = document.getElementById('cardContainer');
     
     cardContainer.innerHTML = '';
     arrayToIterate.forEach(element => {
@@ -167,7 +167,7 @@ function getTextFromUser() {
 
 function storeCards() {
     let updatedText = document.getElementById("storeUpdateText")
-    var currentTime = new Date();
+    let currentTime = new Date();
     updatedText.innerText = "updated at: " + currentTime.toLocaleTimeString();
 
 }
